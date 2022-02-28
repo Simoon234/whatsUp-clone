@@ -3,10 +3,11 @@ import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import {Sidebars} from "./Sidebars";
 import {Chat} from "./Chat";
 import {Login} from "./Login";
-import {selectUserName} from "../features/user";
+import {selectUserName, selectUserPhoto, signOut} from "../features/user";
 
-export const LoginScreen = () => {
+export const Wrapper = () => {
     const userName = useSelector(selectUserName);
+    const userPhoto = useSelector(selectUserPhoto);
 
     return (
         <div>
@@ -15,8 +16,8 @@ export const LoginScreen = () => {
                     <div className='app__body'>
                         <Router>
                             <Routes element={<Sidebars/>}>
-                                <Route path='/' element={<Sidebars/>}/>
-                                <Route path='/rooms/:roomId' element={<> <Sidebars/> <Chat/></>}/>
+                                <Route path='/' element={<Sidebars userPhoto={userPhoto} />}/>
+                                <Route path='/rooms/:roomId' element={<> <Sidebars userPhoto={userPhoto} /> <Chat/></>}/>
                             </Routes>
                         </Router>
                     </div>
