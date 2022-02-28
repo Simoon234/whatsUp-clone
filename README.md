@@ -29,4 +29,4 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-To see this project go to => https://whats-up-clone-153ae.web.app/rooms/8egp7BHdlD9wvdfXZ8H3
+To see this project go to => https://whats-up-clone-153ae.web.app
